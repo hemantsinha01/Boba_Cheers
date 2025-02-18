@@ -9,7 +9,7 @@ We are passionate about crafting the most refreshing and flavorful drinks, rangi
 
 **Boba Cheers** was born from our love for vibrant flavors and the joy of sharing good drinks with great company 👫. We wanted to create a space where people can relax, enjoy high-quality beverages, and indulge in mouth-watering snacks—all in one place! Our journey began with a simple idea: to bring people together over amazing drinks, and today, we are proud to serve our signature blends with love ❤️ and passion! 🔥
 
-![Boba Cheers Logo](image/download.jpg)  <!-- Add your logo or any relevant image link here -->
+![Boba Cheers Logo](images/download.png)  <!-- Add your logo or any relevant image link here -->
 
 ## Our Mission
 
