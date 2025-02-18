@@ -1,0 +1,144 @@
+/* General Styling */
+.about-section {
+   /* Beautiful gradient */
+    padding: 80px 20px;
+    text-align: center;
+    color:#32565A;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    color:#0D9C90;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Intro Text */
+.intro-text {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    max-width: 450px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 26px;
+    color:  #0D9C90; /* Gold Color for headings */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.about-text h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #301919;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.about-text p,
+.about-text ul {
+    font-size: 16px;
+    color: #32565A;
+    line-height: 1.8;
+}
+
+/* List Styling */
+.about-text ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.about-text ul li::before {
+    content: '✔️';
+    color: #32565A;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Call to Action Text */
+.cta-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffdd57;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-text ul {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+
+    .cta-text {
+        font-size: 18px;
+    }
+}
+
+

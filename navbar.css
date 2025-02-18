@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+    padding: 0 40px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#25283B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 🔥 Higher than slider */ /* Added to handle mobile menu positioning */
+}
+
+/* ✅ Fix: Corrected "display" typo */
+.navbar .burger {
+  display: none; /* Corrected the typo */
+  cursor: pointer;
+}
+
+/* ✅ Logo section */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  width: 50px; /* Adjusted size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+.navbar .logo h3 a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FABC65;
+}
+
+/* ✅ Navigation Links */
+.navbar .menu .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar .menu .nav-links a {
+  font-size: 18px;
+  color: white;
+}
+
+/* ✅ Mobile View */
+@media (max-width: 900px) {
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background: #4d4b4a;
+    padding: 20px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 999; /* 🔥 Keep it above banner */
+  }
+
+  .navbar .menu .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ✅ Burger Menu */
+  .navbar .burger {
+    display: block;
+  }
+
+  .navbar .burger div {
+    background-color: white;
+    height: 3px;
+    width: 35px;
+    margin: 6px 0;
+    transition: 0.3s;
+  }
+
+  /* ✅ Show Menu when Active */
+  .navbar .menu.active {
+    display: flex;
+  }
+  
+  .navbar .menu.active ~ .banner {
+    margin-top: 50vh; /* 🔥 Push banner further down */
+  }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fabc65;
+            font-family: "Montserrat", sans-serif;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+    </style>
+     <link rel="stylesheet" href="menu.css">
+     <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/download.png" alt="Boba Cheers Logo" />
+            <h3><a href="#">Boba Cheers</a></h3>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div class="menu">
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Item Menu.html">Menu</a></li>
+                <li><a href="#footer">Contact</a></li>
+               
+            </ul>
+        </div>  
+    
+        <!-- Burger Menu -->
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div> <!-- Fixed "ine2" typo -->
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+
+    <!-- Menu Sections -->
+    <div class="menu-container">
+
+        <!-- Drinks Menu -->
+        <section class="menu-section">
+            <h2 class="menu-title">Drinks</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="assets/Menu 3.png" alt="Drinks Menu">
+                </div>
+            </div>
+        </section>
+
+        <!-- Snacks Menu -->
+        <section class="menu-section">
+            <h2 class="menu-title">Snacks</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="assets/Bites.jpg" alt="Snacks Menu">
+                </div>
+            </div>
+        </section>
+
+        <!-- Waffles Menu -->
+        <section class="menu-section">
+            <h2 class="menu-title">Waffles</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="assets/Waffle.jpg" alt="Waffles Menu">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/download.png" alt="Boba Cheers Logo">
+                <h2>Boba Cheers</h2>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+              <p><a href="https://g.co/kgs/HhBdndx" target="_blank" style="text-decoration: none; color: inherit;">📍 1st shop - Beside Kamphuta group, Ghorabandha, Jamshedpur, Jharkhand 831004</a></p>
+
+              <p><a href="https://maps.app.goo.gl/yadU7tFBzp4b4rEh8" target="_blank" style="text-decoration: none; color: inherit;">📍 2nd shop - Near Jubilee park gate 1, Jamshedpur, Jharkhand 831001</a></p>
+
+              <p><a href="https://www.google.com/maps?q=Kagalnagar+park+Sonari,+Jamshedpur,+Jharkhand+831011" target="_blank" style="text-decoration: none; color: inherit;">📍 3rd shop - Kagalnagar park Sonari, Jamshedpur, Jharkhand 831011</a></p>
+                <p>📞 <p>
+                <p>✉️ info@bobacheers.com</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com/bobacheers_29/"><img src="assets/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <p class="copyright">© 2025 Boba Cheers. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

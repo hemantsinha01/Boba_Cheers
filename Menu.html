@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signature Drinks Menu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #ffffff; /* Changed to white for better contrast */
+        --accent-color: #e56f0f; /* Cosmic teal accent */
+        --text-light: #ffffff;
+        --bg-gradient: linear-gradient(to bottom, #000428 0%, #004e92 100%);
+        --bg-gradient: radial-gradient(
+          circle,
+          rgba(10, 10, 25, 1) 10%,
+          rgba(5, 5, 15, 1) 50%,
+          rgba(0, 0, 10, 1) 90%
+        );
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        color: var(--text-light);
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      /* Cosmic Background Elements */
+      .stars-container {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: var(--bg-gradient);
+      }
+
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: twinkle infinite linear;
+      }
+
+      @keyframes twinkle {
+        0% {
+          opacity: 0.3;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 0.3;
+          transform: scale(0.8);
+        }
+      }
+
+      .shooting-star {
+        position: fixed;
+        width: 3px;
+        height: 80px;
+        background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+        opacity: 0.8;
+        transform: rotate(-45deg);
+        animation: shooting 3s linear infinite;
+      }
+
+      @keyframes shooting {
+        0% {
+          top: -10%;
+          left: 80%;
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          left: 20%;
+          opacity: 0;
+        }
+      }
+
+      /* Galaxy Animation */
+      .galaxy {
+        position: fixed;
+        width: 250vw;
+        height: 250vw;
+        top: -75vw;
+        left: -75vw;
+        background: url("https://cdn.esahubble.org/archives/images/screen/heic2007a.jpg"); /* Replace with a visible nebula texture */
+        background-position: top left; /* Positions the image at the top-left corner */
+        background-size: auto;
+        opacity: 0.5;
+        filter: blur(10px);
+        mix-blend-mode: screen;
+        animation: galaxySpin 60s infinite linear;
+      }
+
+      @keyframes galaxySpin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Content */
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      /* --- Header Styling --- */
+      .header {
+        background-image: url("assets/header-bg.jpg"); /* Add a beautiful background */
+        background-size: cover;
+        background-position: center;
+        background: rgba(0, 3, 17, 0.7);
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .header h1 {
+        font-family: "Lucida Handwriting", Cursive;
+        font-size: 3rem;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      /* --- Menu Sections --- */
+      .menu-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 20px;
+      }
+
+      .menu-title {
+        font-family: "Lucida Handwriting", Cursive;
+        color: var(--accent-color);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .menu-section {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.4
+        ); /* Reduced opacity for better background visibility */
+        backdrop-filter: blur(
+          10px
+        ); /* Reduced blur so the galaxy remains visible */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly brighter border for contrast */
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(5, 240, 197, 0.25); /* Increased visibility of shadow */
+        transition: all 0.3s ease-in-out;
+        mix-blend-mode: lighten;
+      }
+
+      .menu-section:hover {
+        transform: scale(1.03);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-grid {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item:hover {
+        transform: translateY(-8px);
+      }
+
+      .menu-item img {
+        width: 80%;
+        max-width: 600px;
+        object-fit: contain;
+        border-radius: 15px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item img:hover {
+        transform: scale(1.05);
+      }
+
+      /* --- Call to Action Button --- */
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--accent-color);
+        color: var(--text-light);
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 700;
+        margin: 2rem 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .cta-button:hover {
+        background: #a30800;
+        transform: scale(1.08);
+      }
+
+      .footer {
+        background: #111;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .footer-logo {
+        text-align: center;
+      }
+
+      .footer-logo img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .footer h3 {
+        color: #049974;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+        transition: transform 0.3s;
+      }
+
+      .footer-social img {
+        width: 30px;
+      }
+
+      .footer-social a:hover {
+        transform: scale(1.2);
+      }
+
+      .copyright {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      /* --- Responsive Design --- */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .header h1 {
+          font-size: 2.5rem;
+        }
+
+        .menu-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .menu-item img {
+          width: 90%;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-social a {
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars-container" id="starsContainer"></div>
+    <div class="stars"></div>
+    <div class="galaxy"></div>
+    <!-- Header with Logo -->
+    <header class="header">
+      <img src="assets/download.png" alt="Boba Cheers Logo" class="logo" />
+      <h1>Boba Cheers</h1>
+    </header>
+
+    <!-- Menu Sections -->
+    <div class="menu-container">
+      <!-- Drinks Menu -->
+      <section class="menu-section">
+        <h2 class="menu-title">Drinks</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="assets/Menu 3.png" alt="Drinks Menu" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Snacks Menu -->
+      <section class="menu-section">
+        <h2 class="menu-title">Snacks</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="assets/Bites.jpg" alt="Snacks Menu" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Waffles Menu -->
+      <section class="menu-section">
+        <h2 class="menu-title">Waffles</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="assets/Waffle.jpg" alt="Waffles Menu" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Call to Action Button -->
+    <div style="text-align: center; padding: 2rem 0">
+      <a href="#" class="cta-button">Visit Our Bar</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="assets/download.png" alt="Boba Cheers Logo" />
+          <h2>Boba Cheers</h2>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            <a
+              href="https://g.co/kgs/HhBdndx"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 1st shop - Beside Kamphuta group, Ghorabandha, Jamshedpur,
+              Jharkhand 831004</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://maps.app.goo.gl/yadU7tFBzp4b4rEh8"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 2nd shop - Near Jubilee park gate 1, Jamshedpur, Jharkhand
+              831001</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://www.google.com/maps?q=Kagalnagar+park+Sonari,+Jamshedpur,+Jharkhand+831011"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 3rd shop - Kagalnagar park Sonari, Jamshedpur, Jharkhand
+              831011</a
+            >
+          </p>
+          <p>📞</p>
+          <p></p>
+          <p>✉️ info@bobacheers.com</p>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/bobacheers_29/"
+            ><img src="assets/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+
+      <p class="copyright">© 2025 Boba Cheers. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function createStars() {
+        const container = document.getElementById("starsContainer");
+        for (let i = 0; i < 200; i++) {
+          // Reduced number of stars for performance
+          const star = document.createElement("div");
+          star.className = "star";
+          star.style.width = Math.random() * 3 + "px";
+          star.style.height = star.style.width;
+          star.style.left = Math.random() * 100 + "%";
+          star.style.top = Math.random() * 100 + "%";
+          star.style.animationDuration = Math.random() * 1 + 0.5 + "s"; // Faster animation
+          star.style.animationDelay = Math.random() * 2 + "s";
+          container.appendChild(star);
+        }
+      }
+      createStars();
+
+      function createShootingStars() {
+        setInterval(() => {
+          const star = document.createElement("div");
+          star.className = "shooting-star";
+          star.style.left = Math.random() * 100 + "%";
+          star.style.animationDuration = Math.random() * 2 + 2 + "s";
+          document.body.appendChild(star);
+
+          setTimeout(() => {
+            star.remove();
+          }, 3000);
+        }, 5000); // New shooting star every 5 seconds
+      }
+
+      createShootingStars();
+    </script>
+  </body>
+</html>

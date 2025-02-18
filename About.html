@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #fabc65;
+        font-family: "Montserrat", sans-serif;
+        background-image: repeating-linear-gradient(
+            to right,
+            transparent 0 100px,
+            #25283b22 100px 101px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0 100px,
+            #25283b22 100px 101px
+          );
+      }
+
+      body::before {
+        position: absolute;
+        width: min(1400px, 90vw);
+        top: 10%;
+        left: 50%;
+        height: 90%;
+        transform: translateX(-50%);
+        content: "";
+        background-image: url(images/bg.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        pointer-events: none;
+      }
+    </style>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <div class="menu-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/download.png" alt="Boba Cheers Logo" />
+                <h3><a href="#">Boba Cheers</a></h3>
+            </div>
+        
+            <!-- Navigation Links -->
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Item Menu.html">Menu</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                   
+                </ul>
+            </div>  
+        
+            <!-- Burger Menu -->
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div> <!-- Fixed "ine2" typo -->
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-title">About Us</h2>
+          <p class="intro-text">
+            <strong>Boba Cheers</strong> – Sip, Savor, and Celebrate! We are
+            passionate about crafting the most refreshing and flavorful drinks,
+            ranging from rich and creamy milkshakes to exciting boba teas and
+            energizing mocktails. Alongside our drinks, we offer a delicious
+            variety of snacks like crispy spring potatoes, golden french fries,
+            warm waffles, and crunchy spring rolls to satisfy your cravings!
+          </p>
+
+          <div class="about-content">
+            <div class="about-image">
+              <img
+                src="images/bobacheer.jpg"
+                alt="Boba Cheers Drinks & Snacks"
+              />
+            </div>
+            <div class="about-text">
+              <h3>Our Story</h3>
+              <p>
+                Boba Cheers was born from our love for vibrant flavors and the
+                joy of sharing good drinks with great company. We wanted to
+                create a space where people can relax, enjoy high-quality
+                beverages, and indulge in mouth-watering snacks—all in one
+                place! Our journey began with a simple idea: to bring people
+                together over amazing drinks, and today, we are proud to serve
+                our signature blends with love and passion!
+              </p>
+
+              <h3>Why Choose Us?</h3>
+              <ul>
+                <li>
+                  <strong>Fresh Ingredients:</strong> We use only the best
+                  ingredients to craft our drinks and snacks.
+                </li>
+                <li>
+                  <strong>Wide Variety:</strong> From classic milkshakes to
+                  trendy boba drinks and refreshing mocktails, we have something
+                  for everyone.
+                </li>
+                <li>
+                  <strong>Perfect Pairings:</strong> Enjoy our drinks with
+                  crispy snacks for the ultimate experience.
+                </li>
+                <li>
+                  <strong>Great Atmosphere:</strong> Whether you're here to
+                  chill with friends or grab a quick treat, Boba Cheers is the
+                  perfect place.
+                </li>
+              </ul>
+
+              <h3>Our Mission</h3>
+              <p>
+                At Boba Cheers, our mission is to bring happiness through our
+                drinks and snacks. We believe in innovation, quality, and
+                customer satisfaction. Our goal is to create a welcoming space
+                where every customer enjoys a sip of happiness!
+              </p>
+
+              <p class="cta-text">
+                <strong
+                  >Come visit Boba Cheers today and experience the magic in
+                  every sip! Follow us on social media for the latest updates
+                  and exciting offers.</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="assets/download.png" alt="Boba Cheers Logo" />
+          <h2>Boba Cheers</h2>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            <a
+              href="https://g.co/kgs/HhBdndx"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 1st shop - Beside Kamphuta group, Ghorabandha, Jamshedpur,
+              Jharkhand 831004</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://maps.app.goo.gl/yadU7tFBzp4b4rEh8"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 2nd shop - Near Jubilee park gate 1, Jamshedpur, Jharkhand
+              831001</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://www.google.com/maps?q=Kagalnagar+park+Sonari,+Jamshedpur,+Jharkhand+831011"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+              >📍 3rd shop - Kagalnagar park Sonari, Jamshedpur, Jharkhand
+              831011</a
+            >
+          </p>
+          <p>📞</p>
+          <p></p>
+          <p>✉️ info@bobacheers.com</p>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/bobacheers_29/"
+            ><img src="assets/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+
+      <p class="copyright">© 2025 Boba Cheers. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
