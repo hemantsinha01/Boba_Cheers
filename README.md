@@ -19,4 +19,4 @@ At **Boba Cheers**, our mission is to bring happiness through our drinks and sna
 
 ✨ Come visit **Boba Cheers** today and experience the magic in every sip! ✨  
 Follow us on social media for the latest updates and exciting offers. 🎉  
-📱 [Instagram](#) | 🐦 [Twitter](#) | 📍 [Visit Us!](#)
+📱 [Instagram](https://www.instagram.com/bobacheers_29/) | 📍 [Visit Us!](https://g.co/kgs/HhBdndx)
