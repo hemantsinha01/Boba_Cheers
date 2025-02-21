@@ -113,7 +113,21 @@
 .menu-item img:hover {
     transform: scale(1.05);
 }
+.menu-item .menu-video {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 4;
+}
 
+.menu-item .menu-video:hover {
+    transform: scale(1.05);
+}
 .footer {
     background:#25283B;
     color: white;
