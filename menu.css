@@ -61,7 +61,9 @@
 }
 
 .menu-section {
-    margin: 3rem 0;
+width: 80%; /* Limits width to 80% of the page */
+    max-width: 1200px; /* Ensures it doesn’t get too large on big screens */
+    margin: 3rem auto; /* Centers the section horizontally */
     padding: 2rem;
     background: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
     backdrop-filter: blur(8px); /* Less blur for better clarity */
@@ -70,7 +72,7 @@
     box-shadow: 0 10px 30px rgba(5, 240, 197, 0.3); /* More visible shadow */
     transition: all 0.3s ease-in-out;
     position: relative; /* Ensures it's above the background */
-    z-index: 2; /* Moves it above other elements */
+    z-index: 2;
 }
 
 .menu-section:hover {
@@ -92,7 +94,8 @@
     align-items: center;
     padding: 15px;
     transition: transform 0.3s ease;
-    z-index: 3; /* Ensures images are on top */
+    z-index: 3; 
+    position: relative;/* Ensures images are on top */
 }
 
 .menu-item:hover {
