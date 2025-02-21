@@ -106,18 +106,18 @@
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    position: relative; /* Ensures visibility */
-    z-index: 4; /* Places images on top */
+    position: relative;
+    z-index: 4;
+    display: none;/* Places images on top */
 }
 
 .menu-item img:hover {
     transform: scale(1.05);
 }
 .menu-item .menu-video {
-    width: 80%;
+  width: 80%;
     max-width: 600px;
-    height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
